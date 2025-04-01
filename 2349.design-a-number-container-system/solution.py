@@ -6,7 +6,7 @@
 
 # @lc code=start
 import collections
-from sortedcontainers import SortedSet
+from sortedcontainers import SortedSet # type: ignore
 
 
 class NumberContainers:
@@ -27,6 +27,7 @@ class NumberContainers:
         if number in self.numberToIndices:
             return self.numberToIndices[number][0]
         return -1
+
 
 # Your NumberContainers object will be instantiated and called as such:
 # obj = NumberContainers()
