@@ -42,13 +42,15 @@ word consists only of lowercase English letters.
 1 <= numFriends <= word.length
 """
 
+
 class Solution:
     def answerString(self, word: str, numFriends: int) -> str:
-        if numFriends == 1: return word
+        if numFriends == 1:
+            return word
         n = len(word)
         mx_sbstr = []
         for i in range(n):
-            mx_sbstr.append(word[i:n-numFriends+i+1])
+            mx_sbstr.append(word[i : n - numFriends + i + 1])
 
         largest = mx_sbstr[0]
         for i in range(1, len(mx_sbstr)):
