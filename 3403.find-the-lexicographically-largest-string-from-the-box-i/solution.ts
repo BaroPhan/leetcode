@@ -45,12 +45,12 @@ word consists only of lowercase English letters.
 function answerString(word: string, numFriends: number): string {
     if (numFriends === 1) return word
     const mxsbstr: string[] = []
-    for (let i=0; i<word.length;i++) {
+    for (let i = 0; i < word.length; i++) {
         mxsbstr.push(word.slice(i, word.length - numFriends + i + 1))
     }
-                    
+
     let largest = mxsbstr[0]
-    for (let i=1; i<mxsbstr.length;i++){
+    for (let i = 1; i < mxsbstr.length; i++) {
         if (mxsbstr[i].localeCompare(largest) === 1)
             largest = mxsbstr[i]
     }
