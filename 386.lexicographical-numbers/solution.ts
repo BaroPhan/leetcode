@@ -30,7 +30,7 @@ function lexicalOrder(n: number): number[] {
   return result;
 }
 
-function recursion(curr: number, result: number[], limit: number): vFoid {
+function recursion(curr: number, result: number[], limit: number): void {
   result.push(curr);
   for (let i = 0; i < 10; i++) {
     const child = curr * 10 + i;
